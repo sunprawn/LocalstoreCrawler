@@ -8,15 +8,22 @@
 from scrapy.item import Item, Field
 
 
-class ShopItem(Item):
+class StoreItem(Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     id = Field()
     name = Field()
     phone = Field()
-    address = Field()
+    #address = Field()
+    street_address = Field()
     shopping_centre = Field()
-    pass
+    suburb = Field()
+    state = Field()
+    postcode = Field()
+    brand = Field()
+    website = Field()
+    categories = Field()
+    opentime = Field()
 
 class SuburbItem(Item):
     id = Field()
@@ -27,3 +34,8 @@ class SuburbItem(Item):
 class CategoryItem(Item):
     id = Field()
     name = Field()
+
+class BrandItem(Item):
+    id = Field()
+    name = Field()
+    image = Field()
